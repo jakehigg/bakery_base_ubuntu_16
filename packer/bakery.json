@@ -17,7 +17,7 @@
     "associate_public_ip_address": "true",
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "Ubuntu Base Image with Puppet {{timestamp}}"
+    "ami_name": "Ubuntu Base Image with Puppet {{timestamp}}",
     "tags": {
         "OS": "Linux",
         "Release": "Ubuntu16",
