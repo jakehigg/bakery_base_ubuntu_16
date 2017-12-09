@@ -27,6 +27,12 @@
      }
   }],
     "provisioners": [
+			{
+			"type" : "file",
+			"source" : "./files/environment",
+			"destination" : "~/environment"
+		},
+
         {
             "type": "shell",
             "inline":[
@@ -34,13 +40,9 @@
                 "sudo dpkg -i puppetlabs-release-pc1-xenial.deb",
 				"sudo apt-get update",
 				"sudo apt-get install puppet-agent -y",
+				"sudo mv ~/environment /etc/environment",
 				"rm puppetlabs-release-pc1-xenial.deb"
             ]
-        },
-		{
-			"type" : "file",
-			"source" : "./files/environment",
-			"destination" : "/etc/environment"
-		}
+        }
     ]
 }
