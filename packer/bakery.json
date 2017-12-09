@@ -30,7 +30,7 @@
 			{
 			"type" : "file",
 			"source" : "./files/environment",
-			"destination" : "~/environment"
+			"destination" : "/tmp/environment"
 		},
 
         {
@@ -40,7 +40,7 @@
                 "sudo dpkg -i puppetlabs-release-pc1-xenial.deb",
 				"sudo apt-get update",
 				"sudo apt-get install puppet-agent -y",
-				"sudo mv ~/environment /etc/environment",
+				"sudo mv /tmp/environment /etc/environment",
 				"rm puppetlabs-release-pc1-xenial.deb"
             ]
         }
